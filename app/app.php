@@ -10,10 +10,10 @@
 	$app->get('/', function() use ($app) {
 		return $app['twig']->render('rps.html.twig');
 	});
-	$app->post("/anagram_confirm", function() use ($app) {
-		$new_Anagram = new Anagram;
-		$confirmed_anagrams = $new_Anagram->wordArray($_POST['word'], $_POST['possibleAnagrams']);
-        return $app['twig']->render('anagram_results.html.twig', array('newAnagram' => implode(" ", $confirmed_anagrams)));
+	$app->post("/results", function() use ($app) {
+		$new_RockPaperScissors= new RockPaperScissors;
+		$result = $new_RockPaperScissors->playGame($_POST['player1'], $_POST['player2']);
+        return $app['twig']->render('result.html.twig', array('new_RockPaperScissors' => $result));
 	});
 	return $app;
 ?>
