@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="/css/styles.css" rel="stylesheet" media="all" type="text/css" charset="utf-8">
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <h2>Play Rock Paper Scissors</h2>
+
+        <form action="/anagram_confirm" method="post">
+
+            <label for="player1">Player 1 weapon</label>
+            <select multiple class="form-control" name="player1" id="player1">
+              <option>rock</option>
+              <option>paper</option>
+              <option>scissors</option>
+            </select>
+            <br>
+
+            <label for="player2">Player 2 weapon</label>
+            <input type="text" name="player2" id="player2" class="form-control">
+            <br>
+
+            <button class="btn btn-success btn-sm" type="submit" name="button">Play</button>
+
+        </form>
+  </body>
+</html>
